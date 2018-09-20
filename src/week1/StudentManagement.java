@@ -1,8 +1,47 @@
-p
-}
+package java1;
 
+import java.util.*;
 
-	
+class Student {	
+	// TODO: khai báo các thuộc tính cho Student
+     String Name, Id, Email, Group;
+    // TODO: khai báo các phương thức getter, setter cho Student
+    public String getName()
+    {
+        return Name;
+    }
+    public void  setName(String s)
+    {
+        this.Name = s;
+    }
+    public String getEmail()
+    {
+        return Email;
+    }
+    public void setEmail(String s)
+    {
+        this.Email = s;
+    }
+    public String getGroup()
+    {
+        return Group;
+    }
+    public void setGroup(String s)
+    {
+        this.Group = s;
+    }
+    public String getId()
+    {
+        return Id;
+    }
+    public void setId(String id)
+    {
+        this.Id = id;
+    }
+    /**
+     * Constructor 1
+     */
+
     public Student() {
         // TODO:
         this.Name = "student";
@@ -38,6 +77,45 @@ p
         this.Group = s.Group;
     }
 
+    public void getInfo()
+    {
+    	System.out.println("--------------------------------");
+        System.out.println("Name: "+this.Name);
+        System.out.println("MSSV: "+this.Id);
+        System.out.println("Email: "+this.Email);
+        System.out.println("Group: "+this.Group);
+    	System.out.println("--------------------------------");
+    }
+}
+
+public class StudentManage {
+
+	static Scanner sc = new Scanner(System.in);
+     // TODO: khai báo thuộc tính students là array chia các đối tượng thuộc lớp Student (max. 100)
+	static Student[] list = new Student[10];
+	static int n = list.length;
+    public static  boolean sameGroup(Student s1, Student s2) {
+        // TODO:
+        if ( s1.Group.equals(s2.Group)) return true;
+        else return false; // xóa dòng này sau khi cài đặt
+    }
+
+    static void scan()
+    {
+    	for( int i = 0 ; i < n; i ++)
+    	{
+    		String a, b, c;
+    		System.out.print("Name: ");
+    		a = sc.nextLine();
+    		System.out.print("ID: ");
+    		b = sc.nextLine();
+    		System.out.print("Email: ");
+    		c = sc.nextLine();
+    		list[i] = new Student(a,b,c);
+    		System.out.print("Group: ");
+    		list[i].Group = sc.nextLine();
+    	}
+    }
      static void studentsByGroup() {
         // TODO:
     	HashSet<String> hs = new HashSet<String>();
@@ -113,3 +191,5 @@ p
     }
     
 }
+
+
