@@ -1,13 +1,13 @@
 package week4.task2;
 
 /**
- * @author Nguyễn Đức Hải
- * MSSV: 17020715
+ * @author Nguyễn Đức Hiếu	
+ * MSSV: 17020742
  * @since Shape
  */
 public class Circle extends Shape{
 	double radius = 1.0;
-	double PI = 3.14;
+	final double PI = 3.14;
 	/**
 	 * hàm khởi tạo mặc định
 	 */
