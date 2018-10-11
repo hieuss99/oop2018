@@ -1,7 +1,7 @@
 package week4.task2;
 
 /**
- * @author Nguyễn Đức Hiếu  
+ * @author Nguyễn Đức Hiếu	
  * MSSV: 17020742
  * @since Rectangle
  */
@@ -13,11 +13,11 @@ public class Square extends Rectangle{
 	
 	/**
 	 * hàm khởi tạo với tham số side
-	 * @param side diện tích
+	 * @param side cạnh
 	 */
 	public Square(double side)
 	{
-		this.lenghth = this.width = Math.sqrt(side);
+		this.lenghth = this.width = side;
 	};
 	/**
 	 * hàm khởi tạo có tham số diện tích, màu , tính chất
@@ -32,20 +32,20 @@ public class Square extends Rectangle{
 		this.filled = filled;
 	};
 	/**
-	 * hàm trả về giá trị diện tích
-	 * @return diện tích hình vuông
+	 * hàm trả về giá trị các cạnh
+	 * @return cạnh 
 	 */
 	public double getSide()
 	{
-		return this.getArea();
+		return this.width;
 	}
 	/**
-	 * hàm lấy giá trị diện tích 
-	 * @param side diện tích 
+	 * hàm lấy giá trị cạnh
+	 * @param side cạnh
 	 */
 	public void setSide(double side) {		
-		this.setWith(Math.sqrt(side));
-		this.setLength(Math.sqrt(side));
+		this.setWith(side);
+		this.setLength(side);
 	}
 	/**
 	 * hàm lây giá trị cho chiều rộng (cạnh hình vuông)
@@ -53,7 +53,7 @@ public class Square extends Rectangle{
 	 */
 	public void setWith(double side)
 	{
-		this.width = Math.sqrt(side);
+		this.width = side ;
 	}
 	/**
 	 * hàm lấy giá trị cho chiều dài (cạnh hình vuông)
@@ -61,6 +61,6 @@ public class Square extends Rectangle{
 	 */
 	public void setLength(double side)
 	{
-		this.lenghth = Math.sqrt(side);
+		this.lenghth = side ;
 	}
 }
